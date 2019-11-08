@@ -38,7 +38,20 @@ class User:
 
 
 class RegisterUser(Resource):
-    parser=
+    parser = reqparse.RequestParser()
+    parser.add_argument('username',
+                        type=str,
+                        required=True,
+                        help="This field cannot be blank")
+    parser.add_argument('password',
+                        type=str,
+                        required=True,
+                        help="This field cannot be blank")
+    def post(self):
+        data=self.parser.parse_args()
+
+
+
 
 
 if __name__ == '__main__':
