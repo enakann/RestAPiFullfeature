@@ -6,7 +6,8 @@ class APiTest(unittest.TestCase):
 
     def test_get1(self):
         self.assertEqual(2,2)
-
+    def test_only_master(self):
+        self.assertEqual(3,3)
 
 
 
