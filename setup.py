@@ -18,16 +18,16 @@ REQUIRES = ["connexion"]
 setup(
     name=NAME,
     version=VERSION,
-    description="Swagger Petstore",
+    description="Kannan",
     author_email="apiteam@swagger.io",
     url="",
-    keywords=["Swagger", "Swagger Petstore"],
+    keywords=["flask_rest", "Swagger Petstore"],
     install_requires=REQUIRES,
     packages=find_packages(),
-    package_data={'': ['swagger/swagger.yaml']},
+    package_data={'': ['swagger/swagger.yaml','data.db']},
     include_package_data=True,
     entry_points={
-        'console_scripts': ['swagger_server=swagger_server.__main__:main']},
+        'console_scripts': ['flask_rest=flask_rest.__main__:main']},
     long_description="""\
     This is a sample server Petstore server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key &#x60;special-key&#x60; to test the authorization     filters.
     """
