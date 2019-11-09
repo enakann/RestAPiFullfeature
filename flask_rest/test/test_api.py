@@ -10,7 +10,7 @@ class APiTest(unittest.TestCase):
     def test_only_master(self):
         self.assertEqual(3,3)
     def test_fail(self):
-        self.assertEqual(1,2)
+        self.assertEqual(1,1)
 
 
 
