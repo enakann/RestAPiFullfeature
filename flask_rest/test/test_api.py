@@ -9,6 +9,8 @@ class APiTest(unittest.TestCase):
         self.assertEqual(2,2)
     def test_only_master(self):
         self.assertEqual(3,3)
+    def test_fail(self):
+        self.assertEqual(1,2)
 
 
 
