@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from flask_rest.app import app
+from app import app
 
 
 def main():
