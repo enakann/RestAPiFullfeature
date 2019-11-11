@@ -1,5 +1,5 @@
 FROM python:3-alpine
-RUN yum groupinstall "Development Tools"
+#RUN yum groupinstall "Development Tools"
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
