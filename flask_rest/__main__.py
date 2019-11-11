@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-import connexion
-
 from flask_rest.app import app
 
 
