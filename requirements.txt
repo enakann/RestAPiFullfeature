@@ -4,6 +4,5 @@ flask_restful
 flask_jwt
 pylint==2.4.2
 pymongo==3.9.0
-psycopg2
 uwsgi
 
