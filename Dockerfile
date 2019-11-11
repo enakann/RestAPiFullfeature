@@ -13,4 +13,4 @@ EXPOSE 5000
 
 ENTRYPOINT ["python"]
 
-CMD ["-m", "flask_rest"]
+CMD ["flask_rest/app.py"]
