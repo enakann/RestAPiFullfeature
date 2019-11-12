@@ -1,1 +1,5 @@
 https://stackoverflow.com/questions/20715238/flask-restful-api-multiple-and-complex-endpoints
+
+docker tag local-image:tagname new-repo:tagname
+docker push new-repo:tagname
+docker push kannan1985/flask_rest:tagname
