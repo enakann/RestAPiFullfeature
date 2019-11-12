@@ -1,0 +1,11 @@
+---
+- host: all
+  become: true
+
+  tasks:
+    - name: build docker image for flask rest api project
+      command: docker build -t flask_rest_image .
+      args:
+        chdir: /opt/docker
+    - name: create container using simple-devops-image
+      command: docker run -d --name flask_rest -p 5000:5000 flask_rest_image
