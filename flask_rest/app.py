@@ -33,4 +33,8 @@ api.add_resource(Item,'/item/<string:name>')
 if __name__ == '__main__':
     from db import db
     db.init_app(app)
+<<<<<<< HEAD
     app.run(port=5000,debug=True)
+=======
+    app.run(host='0.0.0.0',port=5000,debug=True)
+>>>>>>> b5219eac2b34bfc07b0417d0aab0611c18c25ad4

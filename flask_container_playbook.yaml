@@ -1,0 +1,24 @@
+---
+- hosts : all
+  become: true
+
+  tasks:
+    - name: stop current running container
+      command: docker stop flask_rest
+      ignore_errors: yes
+
+    - name: remove the stopped container
+      command: docker rm flask_rest
+      ignore_errors: yes
+
+    - name: remove flask_rest_image image
+      command: docker rmi flask_rest_image
+      ignore_errors: yes
+
+    - name: build docker image for flask rest api project
+      command: docker build -t flask_rest_image .
+      args:
+        chdir: /opt/docker
+
+    - name: create container using flask_rest_image
+      command: docker run -d --name flask_rest -p 5001:5001 flask_rest_image
