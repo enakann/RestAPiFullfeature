@@ -13,6 +13,12 @@ class UserModel(db.Model):
     def __init__(self,username,password):
         self.username=username
         self.password=password
+
+    def json(self):
+        return {
+            "id":self.id,
+            "username":self.username
+        }
     @classmethod
     def find_user_by_id(cls,_id):
         return cls.query.filter_by(id=_id).first()
@@ -31,3 +37,8 @@ class UserModel(db.Model):
 
     def __repr__(self):
         return str(self)
+
+
+if __name__ == '__main__':
+    users=UserModel.query.all()
+    print([x.json() for x in users])
